@@ -27,4 +27,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Run echo
       run: |
-        SHITPOSTING_ENDPOINT=<URL-NEEDED> python partyparrot.py "HELLO" -f
+        SHITPOSTING_ENDPOINT=${{ secrets.SLACK_WEBHOOK_URL }} python partyparrot.py "HELLO" -f
